@@ -77,6 +77,7 @@
             <div class="tag-button">Study Case</div>
         </div>
     </header>
+    {{dd($data)}}
     <div class="row fadeInOnLoad">
         @foreach(range(1, 6) as $article)
             <div class="col-md-4 mb-4">
