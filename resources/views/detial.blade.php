@@ -126,7 +126,7 @@
     
 
         <div class="share-section line-t line-b">
-            <span class="font-weight-bold">Share:</span>
+            <span class="font-weight-bold">Share</span>
             <div class="share-icons">
             <a href="#" class="text-success mx-2">
                 <img src="{{ asset('3corseco_asset/article/icons/facebook.svg')}}" />
@@ -155,8 +155,8 @@
                     s.setAttribute('data-timestamp', +new Date());
                     (d.head || d.body).appendChild(s);
                     })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 @endsection
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
