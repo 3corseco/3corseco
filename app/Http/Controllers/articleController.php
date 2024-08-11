@@ -3,10 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class articleController extends Controller
 {
+    public function __construct()
+    {
+        $this->shareCategories();
+    }
+
+    protected function shareCategories()
+    {
+        // Fetch categories
+        $product_cate = DB::table('tbl_product_categories')
+            ->orderBy('name_en')
+            ->get();
+
+        // Share with all views
+        view()->share('product_cate', $product_cate);
+    }
+    
     public function index(Request $request) {
         $category_name = $request->input('category');
         $keyword = $request->input('keyword');

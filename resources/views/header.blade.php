@@ -163,8 +163,10 @@ div#main-navbar{
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">ផលិតផល<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/cashew-nut">Cashew Nut</a></li>
-                                <li class="divider"></li>
+                                @foreach ($product_cate as $category)
+                                 <li><a href="{{ url('products?by=').$category->slug}}">{{ $category->name_kh}}</a></li>
+                                 <li class="divider"></li>
+                                @endforeach
                                 <li><a href="/palm-fruit-powder">Palm Fruit Powder</a></li>
                                 <li class="divider"></li>
                                 <li><a href="/irvingia-malayana">Irvingia malayana</a></li>
