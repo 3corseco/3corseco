@@ -31,6 +31,11 @@ Table of Content:
 /*=====Color Styles By Section=====*/
 /*===== GLOBAL =====*/
 @import url('https://fonts.googleapis.com/css2?family=Bayon&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+
+body h1, h2, h3, h5, h6, a, b, p, span{
+  font-family: "Bayon", sans-serif;
+  font-weight: 200;
+}
 a {
   color: #0084ff;
 }

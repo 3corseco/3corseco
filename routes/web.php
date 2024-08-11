@@ -19,4 +19,4 @@ Route::get('/', function () {
 Route::get('/articles',  [articleController::class, 'index']);
 
 Route::get('/about',  [articleController::class, 'about']);
-Route::get('/article/{slug}',  [articleController::class, 'articleRead']);
+Route::get('/read/{slug}',  [articleController::class, 'articleRead']);

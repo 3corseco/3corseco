@@ -23,4 +23,17 @@
 <!-- Main JS -->
 <script src="{{ asset('js/main.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script><script src="{{ asset('assets/js/custom.hero.js') }}"></script>
+<script src="{{ asset('assets/js/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ asset('assets/js/popper.min.js') }}"></script>
+
+<script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}"></script>
+<script src="{{ asset('http://maps.google.com/maps/api/js?key=AIzaSyBEDfNcQRmKQEyulDN8nGWjLYPm8s4YB58') }}"></script>
+<script src="{{ asset('assets/js/isInViewport.jquery.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('assets/js/scrolla.jquery.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.validate.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery-validate.bootstrap-tooltip.min.js') }}"></script>
+<script src="{{ asset('assets/js/custom.js') }}"></script>
+

@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/a4151a8a5e.js" crossorigin="anonymous"></script>
     
     <head>
-        <title>3corseco-@yield('title')</title>
+        <title>3corseco | @yield('title')</title>
         <style>
             .scroll_to_top {
                 position: fixed;

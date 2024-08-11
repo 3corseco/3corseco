@@ -130,7 +130,7 @@ div#main-navbar{
         <div class="mini_header_wrapper">
             <div class="working-hours">
                
-                <span><span class="working_block"> <i class="fa fa-work"></i> Working Hour:</span>  Mon - Fri, 8:00AM - 5:30PM</span>
+                <span><span class="working_block"> <i class="fa fa-work"></i><b>ម៉ោងធ្វើការ៖</b></span>  Mon - Fri, 8:00AM - 5:30PM</span>
             </div>
             <div class="contact-info">
                 <span>info@3coresco.com</span>
@@ -159,9 +159,9 @@ div#main-navbar{
                 <div class="collapse navbar-collapse" id="main-navbar">
                   
                     <ul class="corseco_nav" style="padding:0;">
-                        <li><a href="/">HOME</a></li>
+                        <li><a href="/">ទំព័រដើម</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">PRODUCT<span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ផលិតផល<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/cashew-nut">Cashew Nut</a></li>
                                 <li class="divider"></li>
@@ -173,8 +173,8 @@ div#main-navbar{
                             
                             </ul>
                         </li>
-                        <li><a href="/articles">ARTICLE</a></li>
-                        <li><a href="/about">ABOUT US</a></li>
+                        <li><a href="/articles">អត្ថបទ</a></li>
+                        <li><a href="/about">អំពីយើង</a></li>
                        
                         <li  class="dropdown show">
                             

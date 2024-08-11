@@ -428,201 +428,294 @@ div.con_wrapper{
 </style>
 
 @section('content')
-<div class=" row m0 text-center fadeInOnLoad" >
-            <div class="" style="
-                background-image: url('{{asset("3corseco_asset/img/home_banner.jpg")}}'); 
-                padding-bottom: 50px;    
-                background-position: center;
-                background-size: cover;"
-            >
-                <div>
-                    <img src="{{asset('3corseco_asset/img/green_logo_png.png')}}">
-                </div>
-                <div class="branding_name">
-                    <ul>
-                        <li>3</li>
-                        <li>C</li>
-                        <li>O</li>
-                        <li>r</li>
-                        <li>s</li>
-                        <li>e</li>
-                        <li>c</li>
-                        <li>o</li>
-                    </ul>
-                </div>
-                <div class="company_slug">
-                    <p>
-                        និរន្ដរភាព .​​​ គុណភាព .​ សហគមន៍ .​ បរិស្ថាន
-                    </p>
-                </div>
-                <a href="https://www.youtube.com/watch?v=m5G0BJETr30" class="btn-lg video">Play <img class="video_play_icon" src="{{asset('images/play-btn-icon.png')}}" alt=""> Video</a>
-                <br>
-                <a href="#product-choose" class="btn btn-warning btn-lg visible-sm-inline-block visible-xs-inline-block">pre-order now</a>
-                <!-- <div class="row apple-watch">
-                    <img src="{{asset('3corseco_asset/img/home_banner.jpg')}}" alt="" class="watch_img">
-                </div> -->
-            </div>
-        </div>
- 
-    <!--==========The Watch==========-->
-    <section class="row the-watch">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 text-center the-watch-img wow zoomIn">
-                    <img src="{{asset('3corseco_asset/img/intro_img.png')}}" alt="" class="img-responsive">
-                </div>
-                <div class="col-md-8">
-                    <div class="row v3 wow fadeIn">
-                        <h2>គ្រាប់ស្វាយចន្ទីកម្ពុជា គុណភាពលេខ១លើពិភពលោក</h2>
-                        <p style="text-align: justify;" class="custom_font_famaly">
-                         គ្រាប់ស្វាយចន្ទីកម្ពុជាត្រូវបានរកឃើញថាជាគ្រាប់ដែលជាប់លេខ១   នៅលើពិភពលោកដោយ​សារ​​ទំហំគ្រាប់ធំ  មានគុណភាពល្អ
-                        សម្បុរ ស និងសារធាតុចិញ្ចឹមខ្ពស់។ GIZ យកគ្រាប់ស្វាយចន្ទីកម្ពុជាទៅវិភាគចំនួន ២ប្រភេទគឺពូជ 23, និង09 ក្នុងចំណោម៤ប្រភេទ  
-                        ដែល​​បានចុះបញ្ជី នៅក្រសួងកសិកម្ម គឺមានពូជ M23, 09, 19, -04 ។  តាមឯកសាររកឃើញថាគ្រាប់ស្វាយចន្ទីកម្ពុជាមានគុណភាពលេខ១ 
-                        នៅលើពិភពលោក​ដោយ​ពូជ 23 មានទំហំធំជាងគេនៅ  លើពិភពលោក ហើយរសជាតិទន់ ផ្អែមឆ្ងាញ់។ សារធាតុ​គ្រាប់ស្វាយចន្ទីកម្ពុជា 
-                        ប្រៀបធៀបជាមួយបណ្ដា ប្រទេសផ្សេងៗដូចជាប្រទេស ប្រេស៊ីល វៀតណាម   កេនយ៉ា និង ឥណ្ឌា     
-                        គឺកម្ពុជា​មាន​សារ​ធាតុចិញ្ចឹមច្រើនជាងគេ     ហើយបើគិតពីកាបូន អ៊ីដ្រាត(carbohydrate) មាន ៣៣ក្រាម   
-                        លើសគេ សូដ្យូម(Sodium)   ១៦ ក្រាម និងវីតាមីន K ៣៤ ក្រាម។ នៅឆ្នាំ ២០១៩  សាកល​វិទ្យាល័យតូក្យូ នៅប្រទេសជប៉ុន   
-                        ក៏បានយកសំណាកពូជគ្រាប់ស្វាយចន្ទី   M23ទៅពិសោធន៍ផងដែរ ហើយបានរក ឃើញថា មាន​សារ​ធាតុ Omega3 ឈ្មោះ​ Oleic Acid 
-                        ដែលជំនួយដល់បេះដូងមានលើសគេ៕
+            <div class=" row m0 text-center fadeInOnLoad" >
+                <div class="" style="
+                    background-image: url('{{asset("3corseco_asset/img/home_banner.jpg")}}'); 
+                    padding-bottom: 50px;    
+                    background-position: center;
+                    background-size: cover;"
+                >
+                    <div>
+                        <img src="{{asset('3corseco_asset/img/green_logo_png.png')}}">
+                    </div>
+                    <div class="branding_name">
+                        <ul>
+                            <li>3</li>
+                            <li>C</li>
+                            <li>O</li>
+                            <li>r</li>
+                            <li>s</li>
+                            <li>e</li>
+                            <li>c</li>
+                            <li>o</li>
+                        </ul>
+                    </div>
+                    <div class="company_slug">
+                        <p>
+                            និរន្ដរភាព .​​​ គុណភាព .​ សហគមន៍ .​ បរិស្ថាន
                         </p>
                     </div>
-                    <!-- <ul class="nav">
-                        <li class="wow fadeIn" data-wow-delay="0.2s">Compatible with all devices</li>
-                        <li class="wow fadeIn" data-wow-delay="0.4s">Android and iOS Support</li>
-                        <li class="wow fadeIn" data-wow-delay="0.6s">Activity &amp; Health Tracker</li>
-                        <li class="wow fadeIn" data-wow-delay="0.8s">Read &amp; reply to messages</li>
-                    </ul> -->
+                    <a href="https://www.youtube.com/watch?v=m5G0BJETr30" class="btn-lg video">Play <img class="video_play_icon" src="{{asset('images/play-btn-icon.png')}}" alt=""> Video</a>
+                    <br>
+                    <a href="#product-choose" class="btn btn-warning btn-lg visible-sm-inline-block visible-xs-inline-block">pre-order now</a>
+                    <!-- <div class="row apple-watch">
+                        <img src="{{asset('3corseco_asset/img/home_banner.jpg')}}" alt="" class="watch_img">
+                    </div> -->
+                </div>
+            </div>
+ 
+            <!--==========The Watch==========-->
+            <section class="row the-watch">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 text-center the-watch-img wow zoomIn">
+                            <img src="{{asset('3corseco_asset/img/intro_img.png')}}" alt="" class="img-responsive">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row v3 wow fadeIn">
+                                <h2>គ្រាប់ស្វាយចន្ទីកម្ពុជា គុណភាពលេខ១លើពិភពលោក</h2>
+                                <p style="text-align: justify;" class="custom_font_famaly">
+                                គ្រាប់ស្វាយចន្ទីកម្ពុជាត្រូវបានរកឃើញថាជាគ្រាប់ដែលជាប់លេខ១   នៅលើពិភពលោកដោយ​សារ​​ទំហំគ្រាប់ធំ  មានគុណភាពល្អ
+                                សម្បុរ ស និងសារធាតុចិញ្ចឹមខ្ពស់។ GIZ យកគ្រាប់ស្វាយចន្ទីកម្ពុជាទៅវិភាគចំនួន ២ប្រភេទគឺពូជ 23, និង09 ក្នុងចំណោម៤ប្រភេទ  
+                                ដែល​​បានចុះបញ្ជី នៅក្រសួងកសិកម្ម គឺមានពូជ M23, 09, 19, -04 ។  តាមឯកសាររកឃើញថាគ្រាប់ស្វាយចន្ទីកម្ពុជាមានគុណភាពលេខ១ 
+                                នៅលើពិភពលោក​ដោយ​ពូជ 23 មានទំហំធំជាងគេនៅ  លើពិភពលោក ហើយរសជាតិទន់ ផ្អែមឆ្ងាញ់។ សារធាតុ​គ្រាប់ស្វាយចន្ទីកម្ពុជា 
+                                ប្រៀបធៀបជាមួយបណ្ដា ប្រទេសផ្សេងៗដូចជាប្រទេស ប្រេស៊ីល វៀតណាម   កេនយ៉ា និង ឥណ្ឌា     
+                                គឺកម្ពុជា​មាន​សារ​ធាតុចិញ្ចឹមច្រើនជាងគេ     ហើយបើគិតពីកាបូន អ៊ីដ្រាត(carbohydrate) មាន ៣៣ក្រាម   
+                                លើសគេ សូដ្យូម(Sodium)   ១៦ ក្រាម និងវីតាមីន K ៣៤ ក្រាម។ នៅឆ្នាំ ២០១៩  សាកល​វិទ្យាល័យតូក្យូ នៅប្រទេសជប៉ុន   
+                                ក៏បានយកសំណាកពូជគ្រាប់ស្វាយចន្ទី   M23ទៅពិសោធន៍ផងដែរ ហើយបានរក ឃើញថា មាន​សារ​ធាតុ Omega3 ឈ្មោះ​ Oleic Acid 
+                                ដែលជំនួយដល់បេះដូងមានលើសគេ៕
+                                </p>
+                            </div>
+                            <!-- <ul class="nav">
+                                <li class="wow fadeIn" data-wow-delay="0.2s">Compatible with all devices</li>
+                                <li class="wow fadeIn" data-wow-delay="0.4s">Android and iOS Support</li>
+                                <li class="wow fadeIn" data-wow-delay="0.6s">Activity &amp; Health Tracker</li>
+                                <li class="wow fadeIn" data-wow-delay="0.8s">Read &amp; reply to messages</li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--========== Gallary ==========-->
+            <div class="container">
+                <h2 style="text-align: center;">PRODUCT STORIES</h2>
+                <div style="position:relative;">
+                    <swiper-container class="mySwiper" navigation="true" style="height:350px; padding:0 100px; position:relative;">
+                        <swiper-slide style="
+                            background-image: url('3corseco_asset/products/Pandan flavor1.jpg'); border-radius:50px;
+                            background-repeat: no-repeat;
+                            background-size: 80%;
+                            background-position: center;
+                        ">
+                        </swiper-slide>
+                        <swiper-slide style="
+                            background-image: url('3corseco_asset/products/photo_2024-03-06_10-51-24.jpg'); border-radius:50px;
+                            background-repeat: no-repeat;
+                            background-size: 80%;
+                            
+                            background-position: center;
+                        ">
+                        </swiper-slide>
+                        <swiper-slide style="
+                            background-image: url('3corseco_asset/products/Cashew Testa.jpg'); border-radius:50px;
+                            background-repeat: no-repeat;
+                            background-size: 80%;
+                            background-position: center;
+                        ">
+                        </swiper-slide>
+                        <swiper-slide style="
+                            background-image: url('3corseco_asset/products/Spicy Flavor1.jpg'); border-radius:50px;
+                            background-repeat: no-repeat;
+                            background-size: 80%;
+                            background-position: center;
+                        ">
+                        </swiper-slide>
+                    </swiper-container>
+                </div>
+            </div>
+
+
+            <!--TIMELINE ********************************************************************************************-->
+            <div  id="our-life-sotry" class="container ts-block ts-separate-bg-element ts-background-repeat" data-bg-image-opacity=".1">
+                <div class="text-center ts-title">
+                    <h2>ដំណើរការផលិត</h2>
+                </div>
+                <!--end ts-title-->
+                <div class="ts-time-line__horizontal">
+                    <ul class="pt-5 owl-carousel" data-owl-items="99" data-owl-auto-width="1">
+                        <li class="ts-time-line__item">
+                            <div class="ts-box">
+                                <div
+                                    style="
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    justify-content: start;
+                                    gap: 10px;
+                                    flex-wrap: nowrap;
+                                    "
+                                    >
+                                    <div
+                                        style="
+                                        width: 40px;
+                                        height: 40px;
+                                        padding:5px;
+                                        background-color: #2964B6;
+                                        border-radius: 50%;
+                                        display: flex;
+                                        flex-direction: row;
+                                        align-items: center;
+                                        justify-content: center;
+                                        "
+                                        >
+                                        <image src="{{asset('3corseco_asset/icons/person.svg')}}" style="width: 40px;">
+                                    </div>
+                                    <h5>
+                                        បណ្ដាញកសិករផ្គត់ផ្គង់គ្រាប់
+                                    </h5>
+                                </div>
+                                <p>
+                                    ចងក្រងកសិករផ្គត់ផ្គង់គ្រាប់ស្រស់ ដែលមានសហគមន៍ 
+                                    ជនជាតិដើមភាគតិចកួយ ក្រុមកសិករវ័យក្មេងស្រុក ប្រាសាទសំបូរ
+                                </p>
+                                <!-- <a href="#" class="btn btn-dark btn-sm">Read More</a> -->
+                            </div>
+                            <!--end ts-box-->
+                            <!-- <figure>
+                                <small>Mar</small>
+                                <h6>2017</h6>
+                            </figure> -->
+                            <!--end date-->
+                        </li>
+                        <li class="ts-time-line__item">
+                            <div class="ts-box">
+                                <h5>ចំការគម្រូផ្ទាល់ និងសម្រាប់ផ្គត់ផ្គង់ ៦០ហ</h5>
+                                <p>
+                                    ផ្ទៃដី៦០ ហិកតាដែលកំពុងសាកល្បងធ្វើកសិកម្មបែប Regeneration Farming 
+                                    ដែលបង្ហាញពីជម្រើស កសិកម្មបែបថ្មី ឆ្លើយតបនឹងបំរែបំរួលអាកាសធាតុ
+                                </p>
+                            </div>
+                        </li>
+                        <li class="ts-time-line__item">
+                            <div class="ts-box">
+                                <h5>ប្រមូលគ្រាប់ លាងសម្អាតហាលនិងស្តុក</h5>
+                                <p>
+                                ដើម្បីធានាបានគ្រាប់ស្វាយចន្ទីដែលមានគុណភាពល្អ 
+                                គ្រាប់ត្រូវលាងសម្អាតឲ្យបានស្អាត ហាលដោយទុកសំណើមត្រឹម ៩%
+                                </p>
+                            </div>
+                        </li>
+                        <li class="ts-time-line__item">
+                            <div class="ts-box">
+                                <h5>Next 8 developers join our team</h5>
+                                <p>
+                                    Integer eu ultrices lacus, at laoreet nunc. In tincidunt
+                                </p>
+                            </div>
+                        </li>
+                        <li class="ts-time-line__item">
+                            <div class="ts-box">
+                                <h5>First Prototype is here</h5>
+                                <p>
+                                    Integer eu ultrices lacus, at laoreet nunc. In tincidunt nisi lorem, eu tempor ligula pulvinar at.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="ts-time-line__item">
+                            <div class="ts-box">
+                                <h5>Solution for slow money transfers</h5>
+                                <p>
+                                    Phasellus in iaculis ante. Fusce odio justo, pulvinar sit amet nisl sed, lacinia laoreet
+                                    augue. Integer eu ultrices lacus, at laoreet
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const processSteps = [
+                        {
+                            icon: 'fas fa-seedling',
+                            description: 'ចុះផ្សារក្នុងវិស័យកសិកម្ម'
+                        },
+                        {
+                            icon: 'fas fa-tractor',
+                            description: 'កាត់ថ្លៃបញ្ចុះ បន្ថែមតម្លៃ'
+                        },
+                        {
+                            icon: 'fas fa-recycle',
+                            description: 'ពង្រីកផលិតកម្ម'
+                        },
+                        {
+                            icon: 'fas fa-hand-holding-water',
+                            description: 'ការរុងរឿងនៃសហគមន៍'
+                        }
+                    ];
+
+                    const processStepsContainer = document.getElementById('process-steps');
+
+                    processSteps.forEach(step => {
+                        const stepElement = document.createElement('div');
+                        stepElement.classList.add('swiper-slide');
+
+                        stepElement.innerHTML = `
+                            <div class="process-icon"><i class="${step.icon}"></i></div>
+                            <div class="process-description">${step.description}</div>
+                        `;
+
+                        processStepsContainer.appendChild(stepElement);
+                    });
+
+                    const swiper = new Swiper('.swiper-container', {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                        breakpoints: {
+                            640: {
+                                slidesPerView: 2,
+                                spaceBetween: 20,
+                            },
+                            768: {
+                                slidesPerView: 3,
+                                spaceBetween: 30,
+                            },
+                            1024: {
+                                slidesPerView: 4,
+                                spaceBetween: 40,
+                            },
+                        },
+                    });
+                });
+            </script>
+
+    <!-- featured post -->
+        <div class="container my-5">
+            <h1 class="text-center mb-4">FEATURED POST</h1>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="{{asset('3corseco_asset/img/post1.png')}}" alt="Article 1" class="img-fluid rounded">
+                    <p class="text-muted" style="text-align: left;">សហគ្រាសកែច្នៃស្វាយចន្ទីក្មេងខ្ចី«៣កូអេកូ»ដាក់ផែនការ ពង្រីកផលិតកម្ម នាំចេញទៅបរទេស</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="{{asset('3corseco_asset/img/post2.png')}}" alt="Article 2" class="img-fluid rounded">
+                    <p class="text-muted" style="text-align: left;">សហគ្រាស ៣កូអេកូ ឈ្នះការប្រកួតអ្នកកែច្នៃស្វាយចន្ទី ឆ្នើមលេខ២ ឆ្នាំ២០២៤</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="{{asset('3corseco_asset/img/post3.png')}}" alt="Article 3" class="img-fluid rounded">
+                    <!-- <h2 class="mt-3">Article 3</h2> -->
+                    <p class="text-muted" style="text-align: left;">ម្សៅត្នោតទុំ របស់សហគ្រាស ៣កូអេកូ ឈ្នះជ័យលេភី ប្រកួតផែនការណ៍អាជីវកម្ម អាជីវកម្មខ្ញុំ</p>
                 </div>
             </div>
         </div>
-    </section>
-    <!--========== Gallary ==========-->
-    <div class="container">
-        <h2 style="text-align: center;">PRODUCT STORIES</h2>
-        <div style="position:relative;">
-            <swiper-container class="mySwiper" navigation="true" style="height:350px; padding:0 100px; position:relative;">
-                <swiper-slide style="
-                    background-image: url('3corseco_asset/products/Pandan flavor1.jpg'); border-radius:50px;
-                    background-repeat: no-repeat;
-                    background-size: 80%;
-                    background-position: center;
-                ">
-                </swiper-slide>
-                <swiper-slide style="
-                    background-image: url('3corseco_asset/products/photo_2024-03-06_10-51-24.jpg'); border-radius:50px;
-                    background-repeat: no-repeat;
-                    background-size: 80%;
-                    
-                    background-position: center;
-                ">
-                </swiper-slide>
-                <swiper-slide style="
-                    background-image: url('3corseco_asset/products/Cashew Testa.jpg'); border-radius:50px;
-                    background-repeat: no-repeat;
-                    background-size: 80%;
-                    background-position: center;
-                ">
-                </swiper-slide>
-                <swiper-slide style="
-                    background-image: url('3corseco_asset/products/Spicy Flavor1.jpg'); border-radius:50px;
-                    background-repeat: no-repeat;
-                    background-size: 80%;
-                    background-position: center;
-                ">
-                </swiper-slide>
-            </swiper-container>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="process-container">
-            <h3 class="process-title">OUR PROCESS</h3>
-            <h2>Soon</h2>
-        </div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const processSteps = [
-                {
-                    icon: 'fas fa-seedling',
-                    description: 'ចុះផ្សារក្នុងវិស័យកសិកម្ម'
-                },
-                {
-                    icon: 'fas fa-tractor',
-                    description: 'កាត់ថ្លៃបញ្ចុះ បន្ថែមតម្លៃ'
-                },
-                {
-                    icon: 'fas fa-recycle',
-                    description: 'ពង្រីកផលិតកម្ម'
-                },
-                {
-                    icon: 'fas fa-hand-holding-water',
-                    description: 'ការរុងរឿងនៃសហគមន៍'
-                }
-            ];
-
-            const processStepsContainer = document.getElementById('process-steps');
-
-            processSteps.forEach(step => {
-                const stepElement = document.createElement('div');
-                stepElement.classList.add('swiper-slide');
-
-                stepElement.innerHTML = `
-                    <div class="process-icon"><i class="${step.icon}"></i></div>
-                    <div class="process-description">${step.description}</div>
-                `;
-
-                processStepsContainer.appendChild(stepElement);
-            });
-
-            const swiper = new Swiper('.swiper-container', {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 40,
-                    },
-                },
-            });
-        });
-    </script>
-
-<!-- featured post -->
-    <div class="container my-5">
-        <h1 class="text-center mb-4">FEATURED POST</h1>
-        <div class="row">
-            <div class="col-md-4 text-center">
-                <img src="{{asset('3corseco_asset/img/post1.png')}}" alt="Article 1" class="img-fluid rounded">
-                <p class="text-muted" style="text-align: left;">សហគ្រាសកែច្នៃស្វាយចន្ទីក្មេងខ្ចី«៣កូអេកូ»ដាក់ផែនការ ពង្រីកផលិតកម្ម នាំចេញទៅបរទេស</p>
-            </div>
-            <div class="col-md-4 text-center">
-                <img src="{{asset('3corseco_asset/img/post2.png')}}" alt="Article 2" class="img-fluid rounded">
-                <p class="text-muted" style="text-align: left;">សហគ្រាស ៣កូអេកូ ឈ្នះការប្រកួតអ្នកកែច្នៃស្វាយចន្ទី ឆ្នើមលេខ២ ឆ្នាំ២០២៤</p>
-            </div>
-            <div class="col-md-4 text-center">
-                <img src="{{asset('3corseco_asset/img/post3.png')}}" alt="Article 3" class="img-fluid rounded">
-                <!-- <h2 class="mt-3">Article 3</h2> -->
-                <p class="text-muted" style="text-align: left;">ម្សៅត្នោតទុំ របស់សហគ្រាស ៣កូអេកូ ឈ្នះជ័យលេភី ប្រកួតផែនការណ៍អាជីវកម្ម អាជីវកម្មខ្ញុំ</p>
-            </div>
-        </div>
-    </div>
     <div class="text-center mt-5 mb-4" style="padding-bottom: 2rem;">
             <h3 class="mb-4">AS FEATURES ON</h3>
             <div class="d-flex justify-content-center flex-wrap">

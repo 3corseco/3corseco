@@ -1,7 +1,7 @@
 <!-- resources/views/articles.blade.php -->
 @extends('layout')
 
-@section('title', 'Articles')
+@section('title', $title)
 
 <style>
     .fadeInOnLoad {
@@ -64,59 +64,138 @@
 @section('content')
 <div class="container my-4" style="padding-top: 10rem;">
     <header class="mb-4">
-        <h2 class="mb-4 text-center">Read our Article</h2>
-        <div class="tags-container">
-            <div class="tag-button active">Newest</div>
-            <div class="tag-button">Health and Wellness</div>
-            <div class="tag-button">Recipes and Cooking Tips</div>
-            <div class="tag-button">Sustainability Practices</div>
-            <div class="tag-button">Community</div>
-            <div class="tag-button">Education</div>
-            <div class="tag-button">Innovations and Technology</div>
-            <div class="tag-button">Events and Announcements</div>
-            <div class="tag-button">Study Case</div>
-        </div>
-    </header>
-    {{dd($data)}}
-    <div class="row fadeInOnLoad">
-        @foreach(range(1, 6) as $article)
-            <div class="col-md-4 mb-4">
-                <a href="/article/The-Journey-Behind-3CORsECO's-Cashew Nuts">
-                    <div class="card h-100">
-                        <img src="{{asset('3corseco_asset/article/art1.png')}}" style="width: 100%;" class="card-img-top" alt="Cashews">
-                        <div class="card-body">
-                            <h5 class="card-title">Article {{ $article }}</h5>
-                            <p class="card-text text-success">Health and Wellness</p>
-                            <p class="card-text text-muted">Feb 23</p>
-                        </div>
+        <h2 class="mb-4 text-center">អានអត្ថបទអំពីយើង</h2>
+            <div class="tags-container">
+                @foreach($categories as $category)
+                    <div class="tag-button text-capitalize @if($oncategory === $category->slug) active @endif">
+                        @if($category->slug === 'all')
+                            <a style="color: #000;" href="{{ url('articles')}}">{{ $category->name_in_khmer }}</a>
+                        @else
+                            <a style="color: #000;" href="{{ url('articles?category=').$category->slug }}">{{ $category->name_in_khmer }}</a>
+                        @endif
                     </div>
-                </a>
+                @endforeach
             </div>
-        @endforeach
-    </div>					
-    <div class="d-flex justify-content-start my-4">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">&#x3C;</a></li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                <li class="page-item"><a class="page-link" href="#">&#x3E;</a></li>
-            </ul>
-        </nav>
-    </div>
-    
+    </header>
+   
+    <div class="container">
+    @if($carticle_listing->isEmpty())
+        <!-- No data found message -->
+        <div class="text-center my-4" 
+            style="
+            padding: 50px;
+            color: red;
+            font-weight: 900;
+            font-size: 3rem;
+            "
+        >
+            <h1>No Found Post Data</h1>
+        </div>
+    @else
+        <!-- Articles listing -->
+        <div class="row fadeInOnLoad">
+            @foreach($carticle_listing as $article)
+                <div class="col-md-4 mb-4">
+                    <a href="{{ url('/read', $article->article_slug) }}">
+                        <div class="card h-100">
+                            @if (Str::startsWith($article->cover_picture, ['http://', 'https://']))
+                                <img src="{{ $article->cover_picture }}" style="width: 100%; height: 250px;" class="card-img-top" alt="Cashews">
+                            @else
+                                <img src="{{ asset($article->cover_picture) }}" style="width: 100%; height: 250px;" class="card-img-top" alt="Cashews">
+                            @endif
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $article->article_title }}</h5>
+                                @php
+                                    $keywords = json_decode($article->keywords);
+                                    $category_ids = unserialize($article->category_id);
+                                @endphp
+
+                                @if($categories && is_array($category_ids))
+                                    @foreach($categories as $category)
+                                        @if(in_array($category->id, $category_ids))
+                                            <span class="card-text text-success">
+                                                <a class="text-success text-capitalize" href="{{ url('articles', $category->slug) }}">{{ $category->name }}</a>
+                                            </span>,
+                                        @endif
+                                    @endforeach
+                                @endif
+
+                                @php
+                                    $createdAt = \Carbon\Carbon::parse($article->created_at);
+                                    $now = \Carbon\Carbon::now();
+                                    $diffInDays = $createdAt->diffInDays($now);
+
+                                    if ($diffInDays < 3) {
+                                        $formattedDate = $createdAt->format('M d');
+                                    } else {
+                                        $formattedDate = $createdAt->diffForHumans($now);
+                                    }
+                                @endphp
+
+                                <p class="card-text text-muted">{{ $formattedDate }}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+        </div>  
+
+        <!-- Pagination -->
+        @php
+            $currentPage = $carticle_listing->currentPage();
+            $totalPages = $carticle_listing->lastPage();
+            $paginationUrl = url()->current(); // Get the base URL for pagination links
+        @endphp
+
+        @if ($totalPages > 1)
+            <div class="d-flex justify-content-start my-4">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        {{-- Previous Page Link --}}
+                        @if ($currentPage > 1)
+                            <li class="page-item">
+                                <a class="page-link" href="{{ $paginationUrl }}?page={{ $currentPage - 1 }}">&#x3C;</a>
+                            </li>
+                        @else
+                            <li class="page-item disabled">
+                                <span class="page-link">&#x3C;</span>
+                            </li>
+                        @endif
+
+                        {{-- Page Number Links --}}
+                        @for ($i = 1; $i <= $totalPages; $i++)
+                            <li class="page-item {{ $currentPage == $i ? 'active' : '' }}">
+                                <a class="page-link" href="{{ $paginationUrl }}?page={{ $i }}">{{ $i }}</a>
+                            </li>
+                        @endfor
+
+                        {{-- Next Page Link --}}
+                        @if ($currentPage < $totalPages)
+                            <li class="page-item">
+                                <a class="page-link" href="{{ $paginationUrl }}?page={{ $currentPage + 1 }}">&#x3E;</a>
+                            </li>
+                        @else
+                            <li class="page-item disabled">
+                                <span class="page-link">&#x3E;</span>
+                            </li>
+                        @endif
+                    </ul>
+                </nav>
+            </div>
+        @endif
+    @endif
+</div>
+
+
+
     <footer class="text-center mt-4 pt-4 border-top">
         <div class="d-flex justify-content-center mb-2">
-            <a href="#" class="text-success mx-2"><i class="fab fa-facebook fa-2x"></i></a>
-            <a href="#" class="text-success mx-2"><i class="fab fa-youtube fa-2x"></i></a>
-            <a href="#" class="text-success mx-2"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#" class="text-success mx-2"><img src="{{ asset('3corseco_asset/article/icons/facebook.svg')}}" /></a>
+            <a href="#" class="text-success mx-2"><img src="{{ asset('3corseco_asset/article/icons/youtube.svg')}}" /></a>
+            <a href="#" class="text-success mx-2"><img src="{{ asset('3corseco_asset/article/icons/instagram.svg')}}" /></a>
         </div>
         <p class="text-muted mb-1">Visit us on</p>
         <div>
-            <a href="#" class="text-success mx-2">Term of Use</a>
             <span class="text-muted mx-1">&bull;</span>
             <a href="#" class="text-success mx-2">Privacy Policy</a>
         </div>

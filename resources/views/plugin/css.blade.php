@@ -1,7 +1,7 @@
 
     
     <!-- Google Font -->
-    <link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
+
     <!-- CSS Plugin Files -->
     <link href="{{asset('css/lib/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/plugins/font -awesome.min.css')}}" rel="stylesheet">
@@ -18,4 +18,6 @@
     <!-- Theme CSS (For Available Color Options, See Documentation ) -->
     <link href="{{asset('css/themes/blue-orange.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
